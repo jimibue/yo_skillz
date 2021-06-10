@@ -7,7 +7,8 @@ class Api::SkillsController < ApplicationController
     end
   
     def show
-      render json: @skill
+    #   render json: @skill
+      render json: @skill.users_with_scores
     end
   
     def create
