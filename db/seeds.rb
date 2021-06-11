@@ -16,11 +16,13 @@ john = User.create(name:'John')
 jim = User.create(name:'Jim')
 jen = User.create(name:'Jen')
 
-# With grade class
+# With grade class, (class methods)
 Grade.create(user_id: john.id, skill_id: hw1.id, score:9)
 
+# With a instance of user clases (grades is a instance method)
 john.grades.create(skill_id: hw2.id, score:8)
 
+# With a instance of skill clases (grades is a instance method)
 ruby.grades.create(user_id: jim.id, score:8)
 rails.grades.create(user_id: jim.id, score:5)
 rails.grades.create(user_id: jen.id, score:7)
