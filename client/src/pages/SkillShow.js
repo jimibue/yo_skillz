@@ -10,17 +10,18 @@ import useAxiosOnMount from '../customHooks/useAxiosOnMount'
 
 const SkillShow = ()=>{
     const {id} = useParams()
-    const {data, loading, error} = useAxiosOnMount(`/api/skills/${id}`)
+    const {data:data1, loading, error} = useAxiosOnMount(`/api/skills/${id}`)
 
+    console.log(data1)
     if(loading) return <Spinner />
     if(error) return <ErrorMessage error={error}/>
 
-    console.log(data)
+    console.log(data1)
     return (
         <div>
             <List 
-            data = {data.scores}
-            name={`Scores for ${data.skill.name}`}
+            data = {data1.scores}
+            name={`Scores for ${data1.skill.name}`}
             renderData ={(userScore) => (
                 <Card>
                 <Card.Content>

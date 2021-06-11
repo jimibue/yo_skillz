@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { Container } from "semantic-ui-react";
 import Navbar from './components/NavBar';
 import About from "./pages/About";
 import Examples from "./pages/Examples";
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
     <Navbar />
+    <Container>
     <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
@@ -28,6 +30,7 @@ function App() {
 
 
       </Switch>
+      </Container>
     </>
   );
 }

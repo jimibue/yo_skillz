@@ -17,7 +17,7 @@ const Users = ()=>{
             <List 
                renderData={(user)=>{
                    return(
-                   <Link to={`/users/${user.id}`}>
+                   <Link key={user.id} to={`/users/${user.id}`}>
                        <h1>{user.name}</h1>
                    </Link>
                    )
